@@ -35,7 +35,7 @@ The general architectural flow involves:
     * Temporal Extent: 7-day sequences prior to recorded flood events.
     * Processing (in `preprocessing_eda.ipynb`, `cnn_lstm.ipynb`, `ibm-granite-model_and_lstm.ipynb`): Cloud masking, normalization, resampling, patch extraction.
 * **Tabular Data:**
-    * Source: Public datasets (details likely in `data_collection.ipynb` or `preprocessing_eda.ipynb`).
+    * Source: Public datasets from Kaggle.
     * Features: Rainfall, river discharge, temperature, elevation, land cover, soil type.
     * Processing (in `preprocessing_eda.ipynb`): Cleaning, encoding, spatial matching.
 * **Combined Data:**
@@ -93,7 +93,7 @@ The project workflow is primarily implemented across several Jupyter Notebooks:
 2.  Run the Notebook you want to checkout, provided you have the data for it.
 3.  The Notebooks have the installations for the required libs.
 
-## 8. Evaluation
+## 7. Evaluation
 The project employs various evaluation metrics:
 * **For Quantile Regression:** Pinball Loss, Prediction Interval Coverage.
 * **For Classification tasks (derived from median quantile or direct classifiers):**
@@ -101,12 +101,12 @@ The project employs various evaluation metrics:
     * Confusion Matrix.
     * ROC AUC score.
 
-## 9. Limitations
+## 8. Limitations
 * **Data Scarcity for Combined Models:** The initial Python snippets for `final_model_on_combined_feature_vectors.ipynb` indicated experiments on a very small combined dataset (N=37 after feature extraction and sampling for some LSTM features). While the project aims for larger sequence analysis, results from such small-scale final model training must be interpreted with caution regarding generalizability.
 * **Dependency on Pre-trained Models:** The performance of visual feature extraction heavily relies on the quality and suitability of the chosen pre-trained models.
 * **Computational Resources:** Training deep learning models, especially CNNs and LSTMs on sequences of large satellite images, can be computationally intensive.
 
-## 10. Future Work & Deployment Vision
+## 9. Future Work & Deployment Vision
 * **Scale Up Dataset:** Acquire and process a significantly larger and more diverse dataset of satellite sequences and corresponding tabular data across India.
 * **Refine Models:** Further optimize hyperparameters and architectures for all model components.
 * **Operational Deployment:**
@@ -115,5 +115,3 @@ The project employs various evaluation metrics:
         * **IMD API:** For live weather data and forecasts for regions in India.
     * Automate the entire pipeline from data collection, preprocessing, feature extraction, prediction, to visualization.
     * **Output:** A dynamic, interactive map displaying flood risk levels (with uncertainty intervals) for various regions in India, serving as an early warning tool for disaster management authorities.
-
-*(Please replace any generic paths or filenames with your actual ones. If you create a `requirements.txt`, list your packages there.)*
