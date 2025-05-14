@@ -93,22 +93,6 @@ The project workflow is primarily implemented across several Jupyter Notebooks:
 2.  Run the Notebook you want to checkout, provided you have the data for it.
 3.  The Notebooks have the installations for the required libs.
 
-## 7. Usage
-1.  Set up the environment as described in the Installation section.
-2.  Run the Jupyter Notebooks in a logical order, typically starting with data collection and preprocessing, then model training, and finally evaluation or ensembling.
-    ```bash
-    jupyter notebook
-    ```
-    Then open and run cells within:
-    * `data_collection.ipynb`
-    * `preprocessing_eda.ipynb`
-    * Experiment with `cnn_lstm.ipynb` and/or `ibm-granite-model_and_lstm.ipynb` for feature extraction.
-    * Run `oversampling.ipynb` if dealing with imbalanced classes for the final modeling stage.
-    * Execute `final_model_on_combined_feature_vectors.ipynb` to train and evaluate the primary predictive models.
-    * Explore `ensemble_learning.ipynb` for combining model outputs.
-
-    *Note: Ensure any required input data files (CSVs, model weights, etc.) are present in the root directory or update paths within the notebooks accordingly.*
-
 ## 8. Evaluation
 The project employs various evaluation metrics:
 * **For Quantile Regression:** Pinball Loss, Prediction Interval Coverage.
