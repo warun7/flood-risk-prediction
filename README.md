@@ -89,26 +89,9 @@ The project workflow is primarily implemented across several Jupyter Notebooks:
     * **Key Operations:** May involve techniques like averaging predictions, weighted averaging, or using a meta-learner (stacking) on outputs from models trained in other notebooks (e.g., the CNN-LSTM, Granite-LSTM, or the models from `final_model_on_combined_feature_vectors.ipynb`).
 
 ## 6. Installation
-1.  Ensure you have Python 3.x installed.
-2.  Clone this repository.
-3.  Install the required dependencies. It's highly recommended to use a virtual environment:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    pip install -r requirements.txt
-    ```
-    A `requirements.txt` file should be created listing all necessary packages. Key libraries include:
-    * `jupyter`
-    * `numpy`
-    * `pandas`
-    * `matplotlib`
-    * `seaborn`
-    * `scikit-learn`
-    * `tensorflow` or `pytorch` (depending on deep learning framework used in notebooks)
-    * `earthengine-api` (for `data_collection.ipynb`)
-    * `geemap` (often used with Earth Engine in notebooks)
-    * `imblearn` (for `oversampling.ipynb`)
-    * `rasterio` (potentially in `preprocessing_eda.ipynb`)
+1.  Clone this repository.
+2.  Run the Notebook you want to checkout, provided you have the data for it.
+3.  The Notebooks have the installations for the required libs.
 
 ## 7. Usage
 1.  Set up the environment as described in the Installation section.
